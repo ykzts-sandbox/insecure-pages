@@ -1,6 +1,6 @@
 # `<input type="password">`
 
-- http://insecure.stzky.com/
+- http://insecure.stzky.com/password/
 
 Google Chrome 56以降ではHTTPS通信以外で`<input type="password">`を含むHTML文書を開いた際、ロケーションバーに「<q>保護されていない通信</q>」と表示されるようになります。
 
