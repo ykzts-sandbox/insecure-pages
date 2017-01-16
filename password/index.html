@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset=UTF-8>
+<style>
+fieldset { border: 0 }
+fieldset legend { display: none }
+fieldset fieldset { padding-left: 0 }
+fieldset fieldset legend { display: block }
+input + [type=button]::before { content: "hide" }
+[type=password] + [type=button]::before { content: "show" }
+fieldset:invalid [type=submit] {
+  color: graytext;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+</style>
+<title>input[type="password"]</title>
+<fieldset>
+	<legend>login form</legend>
+	<fieldset>
+		<legend><label for=email>email</label></legend>
+		<input id=email name=email placeholder=example@example.com required type=email>
+	</fieldset>
+  <fieldset>
+	  <legend><label for=password>password</label></legend>
+    <input id=password name=password required type=text value=password1234$\@#%> <button type=button></button>
+  </fieldset>
+	<button type=submit>submit</button>
+</fieldset>
+<script>
+document.addEventListener('click', ({ target }) => {
+  if (target.matches('[name="password"] ~ button')) {
+    const fieldset = target.parentNode;
+    const passwordFields = fieldset.querySelectorAll('[name="password"]');
+    [...passwordFields].forEach(passwordField => {
+      passwordField.type = passwordField.type === 'text' ? 'password' : 'text';
+    });
+  }
+});
+</script>
