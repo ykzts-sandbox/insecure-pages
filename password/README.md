@@ -1,5 +1,7 @@
 # `<input type="password">`
 
+- http://insecure.stzky.com/
+
 Google Chrome 56以降ではHTTPS通信以外で`<input type="password">`を含むHTML文書を開いた際、ロケーションバーに「<q>保護されていない通信</q>」と表示されるようになります。
 
 [![Google Chrome 56で`<input type="password">`を含むHTML文書を開いたときのロケーションバーの様子](screenshot.png)](screenshot.png)
