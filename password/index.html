@@ -15,16 +15,16 @@ fieldset:invalid [type=submit] {
 </style>
 <title>input[type="password"]</title>
 <fieldset>
-	<legend>login form</legend>
-	<fieldset>
-		<legend><label for=email>email</label></legend>
-		<input id=email name=email placeholder=example@example.com required type=email>
-	</fieldset>
+  <legend>login form</legend>
   <fieldset>
-	  <legend><label for=password>password</label></legend>
+    <legend><label for=email>email</label></legend>
+    <input id=email name=email placeholder=example@example.com required type=email>
+  </fieldset>
+  <fieldset>
+    <legend><label for=password>password</label></legend>
     <input id=password name=password required type=text value=password1234$\@#%> <button type=button></button>
   </fieldset>
-	<button type=submit>submit</button>
+  <button type=submit>submit</button>
 </fieldset>
 <script>
 document.addEventListener('click', ({ target }) => {
